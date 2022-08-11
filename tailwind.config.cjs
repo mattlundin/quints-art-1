@@ -5,7 +5,7 @@ module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		screens: {
-			xs: '405px',
+			xs: '445px',
 			sm: '640px',
 			md: '768px',
 			lg: '1024px',

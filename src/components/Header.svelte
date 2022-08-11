@@ -7,6 +7,7 @@
 
 	onMount(() => {
 		gsap.from('.header', {
+			opacity: 0,
 			scale: 0.1,
 			rotate: -360,
 			duration: 1,
