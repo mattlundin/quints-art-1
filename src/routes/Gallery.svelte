@@ -1,37 +1,39 @@
 <script>
 	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
+	// import { gsap } from 'gsap';
+	// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.min.js';
+	// gsap.registerPlugin(ScrollTrigger);
 
-	ScrollTrigger.refresh();
+	import { gsap, ScrollTrigger } from '../gsap';
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
+		ScrollTrigger.refresh();
 
-		const artWork = gsap.utils.toArray('.art-work');
-		for (let i = 0; i < artWork.length; i++) {
-			let art = artWork[i];
-
-			gsap.from(art, {
-				scrollTrigger: {
-					trigger: art,
-					start: '10px, 85%'
-				},
-				duration: 2,
-				scale: 0.001
-				// opacity: 0,
-				// rotation: 90
-			});
-		}
-
-		gsap.from('.gallery', {
+		gsap.from('.gallery-header', {
 			opacity: 0,
 			y: -300,
 			x: 200,
 			rotate: -180,
 			duration: 1
 		});
+
+		gsap.utils.toArray('.art-work').forEach((el) => {
+			gsap.from(el, {
+				opacity: 0,
+				scale: 0.005,
+				scrollTrigger: {
+					trigger: el,
+					duration: 2.5,
+					start: 'bottom 80%',
+					reverse: true,
+					toggleActions: 'play none none reverse'
+				}
+			});
+		});
 	});
+
+	ScrollTrigger.refresh();
 </script>
 
 <svelte:head>
@@ -45,9 +47,7 @@
 "
 >
 	<div class="header flex flex-col items-center mb-48 pt-24 text-gray-200">
-		<h2
-			class="gallery mt-3 xs:text-7xl sm:text-8xl md:text-9xl text-6xl text-shadow-lg shadow-black"
-		>
+		<h2 class="gallery-header mt-3 xs:text-8xl md:text-9xl text-6xl text-shadow-lg shadow-black">
 			Gallery
 		</h2>
 	</div>
@@ -68,9 +68,9 @@
 	> -->
 
 	<section
-		class="img-container grid sm:grid-cols-2 lg:grid-cols-3 lg:mx-auto h-auto grid-cols-1 gap-10 justify-center max-w-screen-2xl mx-auto px-2 pb-24"
+		class="img-container grid sm:grid-cols-2 lg:grid-cols-3 lg:mx-auto h-auto grid-cols-1 gap-8 justify-center max-w-screen-2xl mx-auto px-4 pb-24"
 	>
-		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black ">
+		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black">
 			<img src="/images/painting-1.webp" alt="" title="painting1" />
 		</div>
 		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black">

@@ -1,8 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
-	// import { CustomEase } from '../../CustomEase.min.js';
+	// import { gsap } from 'gsap';
+	// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
+	import { gsap, ScrollTrigger } from '../gsap';
 
 	import Header from '../components/Header.svelte';
 
@@ -74,7 +74,7 @@
 			alt=""
 		/>
 	</div>
-	<section class="sm:-my-24 -my-12 mx-auto">
+	<section class="sm:-my-24 sm:pb-0 -my-48 pb-56 mx-auto">
 		<div class="sm:flex-row sm:mx-5 flex flex-col justify-between">
 			<div
 				class="parallax sm:w-1/2 w-full mb-8 bg-fixed sm:bg-left bg-center bg-no-repeat object-cover max-w-screen-xl"
@@ -122,7 +122,7 @@
 		</div>
 
 		<!-- Bottom parallax section -->
-		<div class="sm:mb-72 mb-48 h-full w-screen mt-24">
+		<div class="sm:mb-72 pb-48 h-full w-screen mt-24">
 			<div
 				class="parallax w-full mx-auto bg-fixed object-cover bg-center bg-no-repeat"
 				style="background-image: url('images/brushes.webp');

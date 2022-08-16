@@ -1,28 +1,27 @@
 <script>
-	// 	import { onMount } from 'svelte';
-	// 	import { gsap } from 'gsap';
-	// 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger.js';
+	import { onMount } from 'svelte';
+	import { gsap, ScrollTrigger } from '../gsap';
 
-	// 	onMount(() => {
-	// 		gsap.registerPlugin(ScrollTrigger);
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
 
-	// 		let rotate = gsap
-	// 			.timeline({
-	// 				scrollTrigger: {
-	// 					trigger: '.main',
-	// 					pin: true,
-	// 					scrub: 0.2,
-	// 					start: 'top top',
-	// 					end: '+=10000'
-	// 				}
-	// 			})
-	// 			.to('.splatter', {
-	// 				rotation: 720 * 5,
-	// 				duration: 0.5,
-	// 				ease: 'none'
-	// 			});
-	// 	});
-	//
+		gsap.from('.gallery-header', {
+			y: 300,
+			opacity: 0,
+			duration: 1
+		});
+
+		let tl = gsap.timeline({
+			scrollTrigger: {
+				trigger: '.gallery-header',
+				start: 'bottom 80%'
+			}
+		});
+
+		tl.from;
+	});
+
+	ScrollTrigger.refresh();
 </script>
 
 <svelte:head>
@@ -30,14 +29,14 @@
 </svelte:head>
 
 <div
-	class="main bg-yellow-50 h-full z-10 bg-no-repeat bg-auto bg-center bg-fixed"
+	class="main bg-yellow-50 h-full pb-24 px-2 z-10 bg-no-repeat bg-auto bg-center bg-fixed"
 	style="background-image: url('images/blue-splatter.png');
   background-size: 800px 500px;
 "
 >
 	<div class="header flex flex-col items-center mb-48 pt-24 text-gray-200">
 		<h2
-			class="gallery mt-3 xs:text-7xl sm:text-8xl md:text-9xl text-6xl text-shadow-lg shadow-black"
+			class="gallery-header mt-3 xs:text-7xl sm:text-8xl md:text-9xl text-6xl text-shadow-lg shadow-black"
 		>
 			Contact
 		</h2>
@@ -45,10 +44,10 @@
 
 	<!-- Contact Form -->
 	<div
-		class="w-full md:w-2/4 md:max-w-full mx-auto mb-24 bg-slate-800 rounded-lg shadow-2xl opacity-95 shadow-black"
+		class="w-full md:w-2/4 md:max-w-full mx-auto bg-slate-800 rounded-lg shadow-2xl opacity-95 shadow-black"
 	>
 		<div class="p-6 border border-gray-300 sm:rounded-md outline-none border-none">
-			<form action="https://api.staticforms.xyz/submit" method="post">
+			<form action="https://api.staticforms.xyz/submit" method="post" class="">
 				<!-- replace with StaticForms accessKey -->
 				<input type="hidden" name="accessKey" value="replace-with-access-key" />
 				<!-- replace with URL to redirect to -->
