@@ -5,14 +5,20 @@
 		<p>Copyright &copy 2022 Quints Art</p>
 	</div>
 	<div class="socials flex my-auto">
-		<div class="rounded-full px-2">
-			<i class="fa-brands fa-facebook text-3xl" />
+		<div
+			class="rounded-full px-2 hover:text-sky-500 hover:scale-125 transition-all ease duration-300"
+		>
+			<a href="#"><i class="fa-brands fa-facebook text-3xl" /></a>
 		</div>
-		<div class="rounded-full px-2">
-			<i class="fa-brands fa-twitter text-3xl" />
+		<div
+			class="rounded-full px-2 hover:text-sky-500 hover:scale-125 transition-all ease duration-300"
+		>
+			<a href="#"><i class="fa-brands fa-twitter text-3xl" /></a>
 		</div>
-		<div class="rounded-full px-2">
-			<i class="fa-brands fa-instagram text-3xl" />
+		<div
+			class="rounded-full px-2 hover:text-sky-500 hover:scale-125 transition-all ease duration-300"
+		>
+			<a href="#"><i class="fa-brands fa-instagram text-3xl" /></a>
 		</div>
 	</div>
 </footer>

@@ -54,7 +54,7 @@
 	{#if isOpen}
 		<nav
 			class="fixed bottom-0 flex flex-col px-4 bg-slate-800	 h-[calc(100vh-80px)] w-full overflow-hidden z-40"
-			in:fly={{ delay: 0, duration: 300, x: -800, opacity: 0 }}
+			in:fly={{ delay: 0, duration: 300, x: -800 }}
 			out:fly={{ delay: 50, duration: 100, x: -800, opacity: 0 }}
 		>
 			<!-- h-[calc(100%-80px)] -->
@@ -66,8 +66,7 @@
 					<a
 						class="flex w-auto items-center justify-start gap-4 py-4 px-2"
 						on:click={() => setTimeout(() => (isOpen = false), 200)}
-						in:fly={{ delay: 200, duration: 100, opacity: 0 }}
-						out:fly={{ delay: 200, duration: 100, opacity: 0 }}
+						transition:scale={{ delay: 100, duration: 500 }}
 						href="/">Home</a
 					>
 				</li>
@@ -75,8 +74,7 @@
 					<a
 						class="flex w-auto items-center justify-start gap-4 py-4 px-2"
 						on:click={() => setTimeout(() => (isOpen = false), 200)}
-						in:scale={{ delay: 400, duration: 100, opacity: 0 }}
-						out:scale={{ delay: 150, duration: 100, opacity: 0 }}
+						transition:scale={{ delay: 200, duration: 500 }}
 						href="/About">About</a
 					>
 				</li>
@@ -84,8 +82,7 @@
 					<a
 						class="flex w-auto items-center justify-start gap-4 py-4 px-2"
 						on:click={() => setTimeout(() => (isOpen = false), 200)}
-						in:scale={{ delay: 600, duration: 100, opacity: 0 }}
-						out:scale={{ delay: 100, duration: 100, opacity: 0 }}
+						transition:scale={{ delay: 300, duration: 500 }}
 						href="/Gallery">Gallery</a
 					>
 				</li>
@@ -93,8 +90,7 @@
 					<a
 						class="flex w-auto items-center justify-start gap-4 py-4 px-2"
 						on:click={() => setTimeout(() => (isOpen = false), 200)}
-						in:scale={{ delay: 800, duration: 100, opacity: 0, ease: bounceInOut }}
-						out:scale={{ delay: 50, duration: 100, opacity: 0, ease: bounceInOut }}
+						transition:scale={{ delay: 300, duration: 500 }}
 						href="/Contact">Contact</a
 					>
 				</li>

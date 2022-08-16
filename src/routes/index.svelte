@@ -59,7 +59,6 @@
 
 <svelte:window bind:scrollY={scroll} />
 
-<!-- <div class="pt-20" /> -->
 <Header />
 <div
 	class="bg-yellow-50 h-full z-10 bg-no-repeat bg-auto bg-center bg-fixed overflow-hidden"
@@ -67,7 +66,7 @@
   background-size: 800px 500px;
 "
 >
-	<div class="img-container pt-10 mx-auto overflow-hidden h-[50vh] max-w-screen-xl opacity-95">
+	<div class="img-container pt-10 mx-auto overflow-hidden h-[50vh] opacity-95">
 		<img
 			src="/images/paintbrushes.webp"
 			class="rounded-full max-w-96 mx-auto shadow-black shadow-lg z-10"
@@ -75,7 +74,7 @@
 			alt=""
 		/>
 	</div>
-	<section class="sm:-my-24 -my-12 mx-auto ">
+	<section class="sm:-my-24 -my-12 mx-auto">
 		<div class="sm:flex-row sm:mx-5 flex flex-col justify-between">
 			<div
 				class="parallax sm:w-1/2 w-full mb-8 bg-fixed sm:bg-left bg-center bg-no-repeat object-cover max-w-screen-xl"

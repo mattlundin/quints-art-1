@@ -81,7 +81,7 @@
 		gsap.from('.fall-in', {
 			scrollTrigger: {
 				trigger: '.fall-in',
-				start: '10px, 85%'
+				start: '10px, 75%'
 			},
 			opacity: 0,
 			scale: 5,
@@ -93,7 +93,7 @@
 		gsap.from('.slide-up', {
 			scrollTrigger: {
 				trigger: '.slide-up',
-				start: '-350px 95%'
+				start: '-350px 90%'
 			},
 			// opacity: 0,
 			y: 500,
@@ -109,7 +109,7 @@
 				start: '10px 85%'
 			},
 			opacity: 0,
-			duration: 2.2,
+			duration: 1.8,
 			ease: 'none'
 		});
 	});
@@ -123,7 +123,7 @@
 
 <!-- <div class="pt-20" /> -->
 <div
-	class="main bg-yellow-50 h-full z-10 bg-no-repeat bg-auto bg-center bg-fixed overflow-hidden"
+	class="main bg-yellow-50 h-full z-10 bg-no-repeat bg-auto bg-center bg-fixed"
 	style="background-image: url('images/blue-splatter.png');
   background-size: 800px 500px;
 "
@@ -132,7 +132,7 @@
 		<h2 class="name mt-3 xs:text-8xl md:text-9xl text-7xl text-shadow-lg shadow-black">Quints</h2>
 	</div>
 
-	<section class="sm:mt-48 mt-32 max-w-screen-xl sm:mx-auto h-full px-4 overflow-hidden">
+	<section class="sm:mt-48 mt-32 max-w-screen-xl sm:mx-auto h-full px-4">
 		<div class="flex flex-col md:justify-between md:flex-row mt-8">
 			<div class="md:w-1/2 md:mr-3 md:mb-0 mb-8 w-full">
 				<h4 class="slide-right text-3xl font-bold">Background</h4>
@@ -148,7 +148,7 @@
 					Voluptatem vel saepe necessitatibus, consequuntur reiciendis obcaecati dicta nihil!
 				</p>
 			</div>
-			<div class="flex justify-center">
+			<div class="flex justify-center overflow-hidden">
 				<img
 					src="/images/slc-night.webp"
 					alt=""
@@ -158,8 +158,8 @@
 		</div>
 	</section>
 	<section class="max-w-screen-xl sm:mx-auto h-full mt-12 px-4 overflow-hidden">
-		<div class="flex items-center justify-center h-24">
-			<h4 class="fall-in absolute text-4xl ml-auto font-bold">Inspirations</h4>
+		<div class="flex items-center justify-center h-24 overflow-hidden">
+			<h4 class="fall-in absolute text-4xl ml-auto font-bold overflow-hidden">Inspirations</h4>
 		</div>
 		<div class="max-w-screen-lg mx-auto mb-4">
 			<p class="slide-up mb-12">

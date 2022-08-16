@@ -27,7 +27,6 @@
 	style="background-image: url('/images/oil-paints.webp');
 	background-position: 50%;
 	background-repeat: no-repeat;
-	background-height
 	"
 >
 	<div
@@ -35,7 +34,7 @@
 		style="background-color: rgba(0,0,0,0.35)"
 	>
 		<h3
-			class="header xs:text-6xl sm:text-7xl lg:text-8xl xl:text-9xl text-5xl text-center pb-20 my-auto text-gray-300 text-shadow-lg shadow-sky-500"
+			class="header xs:text-6xl sm:text-8xl lg:text-9xl text-5xl text-center pb-20 my-auto text-gray-300 text-shadow-lg shadow-sky-500"
 			style:transform="translateY({scroll * speed}px)"
 		>
 			Quints Art
