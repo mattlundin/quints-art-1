@@ -8,7 +8,6 @@
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
-		ScrollTrigger.refresh();
 
 		gsap.from('.gallery-header', {
 			opacity: 0,
@@ -18,19 +17,62 @@
 			duration: 1
 		});
 
-		gsap.utils.toArray('.art-work').forEach((el) => {
-			gsap.from(el, {
-				opacity: 0,
-				scale: 0.005,
-				scrollTrigger: {
-					trigger: el,
-					duration: 2.5,
-					start: 'bottom 80%',
-					reverse: true,
-					toggleActions: 'play none none reverse'
+		// gsap.utils.toArray('.art-work').forEach((el) => {
+		// 	gsap.from(el, {
+		// 		opacity: 0,
+		// 		scale: 0.005,
+		// 		duration: 1.3,
+		// 		scrollTrigger: {
+		// 			trigger: el,
+		// 			start: 'bottom 80%',
+		// 			reverse: true,
+		// 			toggleActions: 'play none none reverse'
+		// 		}
+		// 	});
+		// });
+
+		const artWorks = gsap.utils.toArray('.art-work');
+		for (let i = 0; i < artWorks.length; i++) {
+			let artWork = artWorks[i];
+
+			ScrollTrigger.matchMedia({
+				// laptop and smaller
+				'(max-height: 600px)': function () {
+					ScrollTrigger.refresh();
+
+					gsap.from(artWork, {
+						scrollTrigger: {
+							trigger: artWork,
+							start: 'bottom 90%',
+							reverse: true,
+							toggleActions: 'play none none reverse'
+						},
+						opacity: 0,
+						scale: 0.005,
+						duration: 1.3
+					});
 				}
 			});
-		});
+
+			ScrollTrigger.matchMedia({
+				// bigger
+				'(min-height: 600px)': function () {
+					ScrollTrigger.refresh();
+
+					gsap.from(artWork, {
+						scrollTrigger: {
+							trigger: artWork,
+							start: 'bottom 80%',
+							reverse: true,
+							toggleActions: 'play none none reverse'
+						},
+						opacity: 0,
+						scale: 0.005,
+						duration: 1.3
+					});
+				}
+			});
+		}
 	});
 
 	ScrollTrigger.refresh();
@@ -41,7 +83,7 @@
 </svelte:head>
 
 <div
-	class="main bg-yellow-50 h-full z-10 bg-no-repeat bg-auto bg-center bg-fixed"
+	class="main bg-yellow-50 h-auto z-10 bg-no-repeat bg-auto bg-center bg-fixed overflow-auto"
 	style="background-image: url('images/blue-splatter.png');
   background-size: 800px 500px;
 "

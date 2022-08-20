@@ -15,68 +15,79 @@
 			duration: 1
 		});
 
-		const slideRights = gsap.utils.toArray('.slide-right');
-		for (let i = 0; i < slideRights.length; i++) {
-			let slideRight = slideRights[i];
+		// const slideRights = gsap.utils.toArray('.slide-right');
+		// for (let i = 0; i < slideRights.length; i++) {
+		// 	let slideRight = slideRights[i];
 
-			ScrollTrigger.matchMedia({
-				// mobile
-				'(max-width: 767px)': function () {
-					gsap.from(
-						slideRight,
-						{
-							scrollTrigger: {
-								trigger: slideRight,
-								start: '10px, 85%'
-							},
-							x: -400,
-							opacity: 0,
-							duration: 1.8,
-							stagger: 1.1,
-							ease: 'Back.easeOut'
-						},
-						'-=1.5'
-					);
+		// ScrollTrigger.matchMedia({
+		// mobile
+		// '(max-width: 767px)': function () {
+		gsap.from(
+			'.slide-right',
+			{
+				scrollTrigger: {
+					trigger: 'slide-right',
+					start: '10px, 85%'
 				},
-				// desktop
-				'(min-width: 768px)': function () {
-					gsap.from(slideRight, {
-						x: -400,
-						opacity: 0,
-						duration: 1.5,
-						// stagger: 2,
-						ease: 'Back.easeOut'
-					});
-				}
-			});
-		}
+				x: -400,
+				opacity: 0,
+				duration: 1.8,
+				stagger: 0.2,
+				ease: 'Back.easeOut'
+			},
+			'-=1.5'
+		);
+		// },
+		// desktop
+		// '(min-width: 768px)': function () {
+		// 	gsap.from(slideRight, {
+		// 		x: -400,
+		// 		opacity: 0,
+		// 		duration: 1.5,
+		// 		stagger: 1.1,
+		// 		ease: 'Back.easeOut'
+		// 	});
+		// }
+		// });
+		// }
 
 		//slc image
-		ScrollTrigger.matchMedia({
-			// mobile
-			'(max-width: 767px)': function () {
-				gsap.from('.grow-left', {
-					scrollTrigger: {
-						trigger: '.grow-left',
-						start: '10px, 85%'
-					},
-					x: 400,
-					opacity: 0,
-					scale: 0.5,
-					duration: 1.5,
-					ease: 'Power3.easeOut'
-				});
+		// ScrollTrigger.matchMedia({
+		// 	// mobile
+		// 	'(max-width: 767px)': function () {
+		// 		gsap.from('.grow-left', {
+		// 			scrollTrigger: {
+		// 				trigger: '.grow-left',
+		// 				start: '10px, 85%'
+		// 			},
+		// 			x: 400,
+		// 			opacity: 0,
+		// 			scale: 0.5,
+		// 			duration: 1.5,
+		// 			ease: 'Power3.easeOut'
+		// 		});
+		// 	},
+		// 	// desktop
+		// 	'(min-width: 768px)': function () {
+		// 		gsap.from('.grow-left', {
+		// 			x: 400,
+		// 			opacity: 0,
+		// 			scale: 0.5,
+		// 			duration: 1.5,
+		// 			ease: 'Power3.easeOut'
+		// 		});
+		// 	}
+		// });
+		gsap.from('.grow-left', {
+			scrollTrigger: {
+				trigger: '.grow-left',
+				start: '10px, 85%'
 			},
-			// desktop
-			'(min-width: 768px)': function () {
-				gsap.from('.grow-left', {
-					x: 400,
-					opacity: 0,
-					scale: 0.5,
-					duration: 1.5,
-					ease: 'Power3.easeOut'
-				});
-			}
+			x: 400,
+			opacity: 0,
+			scale: 0.5,
+			duration: 1.5,
+			ease: 'Power3.easeOut'
 		});
 		// inspirations header
 		gsap.from('.fall-in', {
@@ -85,9 +96,9 @@
 				start: '10px, 75%'
 			},
 			opacity: 0,
-			scale: 5,
-			duration: 2,
-			ease: 'Power3.easeOut'
+			scale: 8,
+			duration: 5,
+			ease: 'Elastic.easeOut'
 		});
 
 		// bottom paragraph
@@ -122,7 +133,6 @@
 	<title>About</title>
 </svelte:head>
 
-<!-- <div class="pt-20" /> -->
 <div
 	class="main bg-yellow-50 h-full z-10 bg-no-repeat bg-auto bg-center bg-fixed"
 	style="background-image: url('images/blue-splatter.png');
@@ -133,7 +143,7 @@
 		<h2 class="name mt-3 xs:text-8xl md:text-9xl text-7xl text-shadow-lg shadow-black">Quints</h2>
 	</div>
 
-	<section class="sm:mt-48 mt-32 max-w-screen-xl sm:mx-auto h-full px-4">
+	<section class="sm:mt-48 mt-32 max-w-screen-2xl mx-auto h-full px-4">
 		<div class="flex flex-col md:justify-between md:flex-row mt-8">
 			<div class="md:w-1/2 md:mr-3 md:mb-0 mb-8 w-full">
 				<h4 class="slide-right text-3xl font-bold">Background</h4>
@@ -158,9 +168,9 @@
 			</div>
 		</div>
 	</section>
-	<section class="max-w-screen-xl sm:mx-auto h-full mt-12 px-4 overflow-hidden">
-		<div class="flex items-center justify-center h-24 overflow-hidden">
-			<h4 class="fall-in absolute text-4xl ml-auto font-bold overflow-hidden">Inspirations</h4>
+	<section class="relative max-w-screen-xl sm:mx-auto h-full mt-12 px-4">
+		<div class="flex items-center justify-center h-24">
+			<h4 class="fall-in absolute text-5xl ml-auto font-bold">Inspirations</h4>
 		</div>
 		<div class="max-w-screen-lg mx-auto mb-4">
 			<p class="slide-up mb-12">
