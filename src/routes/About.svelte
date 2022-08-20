@@ -168,7 +168,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="relative max-w-screen-xl sm:mx-auto h-full mt-12 px-4">
+	<section class="relative max-w-screen-xl sm:mx-auto h-full mt-12 pb-12 px-4">
 		<div class="flex items-center justify-center h-24">
 			<h4 class="fall-in absolute text-5xl ml-auto font-bold">Inspirations</h4>
 		</div>
