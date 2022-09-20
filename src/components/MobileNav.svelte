@@ -53,13 +53,13 @@
 
 	{#if isOpen}
 		<nav
-			class="fixed bottom-0 top-[80px] flex flex-col px-4 bg-slate-800	 h-[calc(100vh-80px)] w-full overflow-hidden z-40"
+			class="fixed bottom-0 flex flex-col px-4 bg-slate-800 w-full overflow-hidden z-40"
 			in:fly={{ delay: 0, duration: 300, x: -800 }}
 			out:fly={{ delay: 50, duration: 100, x: -800, opacity: 0 }}
 		>
 			<!-- h-[calc(100%-80px)] -->
 			<ul
-				class="flex flex-col items-center justify-center gap-2 py-12 text-gray-300 text-2xl overflow-hidden "
+				class="flex flex-col items-center h-[calc(100vh-80px)] gap-2 py-12 text-gray-300 text-2xl overflow-hidden "
 				class:menuRendered={isMenuRendered}
 			>
 				<li class="font-regular font-display" style="transition-delay: 150ms;">
