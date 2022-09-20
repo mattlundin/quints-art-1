@@ -35,45 +35,43 @@
 		for (let i = 0; i < artWorks.length; i++) {
 			let artWork = artWorks[i];
 
-			ScrollTrigger.matchMedia({
-				// laptop and smaller
-				'(max-height: 600px)': function () {
-					ScrollTrigger.refresh();
+			// ScrollTrigger.matchMedia({
+			// 	// laptop and smaller
+			// 	'(max-height: 600px)': function () {
+			// 		gsap.to(artWork, {
+			// 			scrollTrigger: {
+			// 				trigger: artWork,
+			// 				start: 'bottom 95%',
+			// 				reverse: true,
+			// 				toggleActions: 'play none none reverse'
+			// 			},
+			// 			opacity: 1,
+			// 			scale: 1,
+			// 			duration: 0.8
+			// 		});
+			// 	}
+			// });
 
-					gsap.from(artWork, {
-						scrollTrigger: {
-							trigger: artWork,
-							start: 'bottom 90%',
-							reverse: true,
-							toggleActions: 'play none none reverse'
-						},
-						opacity: 0,
-						scale: 0.005,
-						duration: 1.3
-					});
-				}
-			});
+			// ScrollTrigger.matchMedia({
+			// 	// bigger
+			// 	'(min-height: 600px)': function () {
+			ScrollTrigger.refresh();
 
-			ScrollTrigger.matchMedia({
-				// bigger
-				'(min-height: 600px)': function () {
-					ScrollTrigger.refresh();
-
-					gsap.from(artWork, {
-						scrollTrigger: {
-							trigger: artWork,
-							start: 'bottom 80%',
-							reverse: true,
-							toggleActions: 'play none none reverse'
-						},
-						opacity: 0,
-						scale: 0.005,
-						duration: 1.3
-					});
-				}
+			gsap.to(artWork, {
+				scrollTrigger: {
+					trigger: artWork,
+					start: 'bottom 90%',
+					reverse: true,
+					toggleActions: 'play none none reverse'
+				},
+				opacity: 1,
+				scale: 1,
+				duration: 0.8
 			});
 		}
 	});
+	// 	}
+	// });
 
 	ScrollTrigger.refresh();
 </script>
@@ -112,41 +110,41 @@
 	<section
 		class="img-container grid sm:grid-cols-2 lg:grid-cols-3 lg:mx-auto h-auto grid-cols-1 gap-8 justify-center max-w-screen-2xl mx-auto px-4 pb-24"
 	>
-		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black">
+		<div class="art-work opacity-0 scale-50 w-full cursor-pointer shadow-2xl shadow-black">
 			<img src="/images/painting-1.webp" alt="" title="painting1" />
 		</div>
-		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black">
+		<div class="art-work opacity-0 scale-50 w-full cursor-pointer shadow-2xl shadow-black">
 			<img src="/images/painting-2.webp" alt="" title="painting2" />
 		</div>
-		<div class="art-work h-fit w-full cursor-pointer shadow-2xl shadow-black">
+		<div class="art-work opacity-0 scale-50 h-fit w-full cursor-pointer shadow-2xl shadow-black">
 			<img src="/images/painting-3.webp" alt="" title="painting3" class="" />
 		</div>
-		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black">
+		<div class="art-work opacity-0 scale-50 w-full cursor-pointer shadow-2xl shadow-black">
 			<img src="/images/painting-4.webp" alt="" title="painting4" />
 		</div>
-		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black">
+		<div class="art-work opacity-0 scale-50 w-full cursor-pointer shadow-2xl shadow-black">
 			<img src="/images/painting-5.webp" alt="" title="painting5" />
 		</div>
-		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black">
+		<div class="art-work opacity-0 scale-50 w-full cursor-pointer shadow-2xl shadow-black">
 			<img src="/images/painting-6.webp" alt="" title="painting6" />
 		</div>
 		<!--  -->
-		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black ">
+		<div class="art-work opacity-0 scale-50 w-full cursor-pointer shadow-2xl shadow-black ">
 			<img src="/images/painting-1.webp" alt="" title="painting1" />
 		</div>
-		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black">
+		<div class="art-work opacity-0 scale-50 w-full cursor-pointer shadow-2xl shadow-black">
 			<img src="/images/painting-2.webp" alt="" title="painting2" />
 		</div>
-		<div class="art-work h-fit w-full cursor-pointer shadow-2xl shadow-black">
+		<div class="art-work opacity-0 scale-50 h-fit w-full cursor-pointer shadow-2xl shadow-black">
 			<img src="/images/painting-3.webp" alt="" title="painting3" class="" />
 		</div>
-		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black">
+		<div class="art-work opacity-0 scale-50 w-full cursor-pointer shadow-2xl shadow-black">
 			<img src="/images/painting-4.webp" alt="" title="painting4" />
 		</div>
-		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black">
+		<div class="art-work opacity-0 scale-50 w-full cursor-pointer shadow-2xl shadow-black">
 			<img src="/images/painting-5.webp" alt="" title="painting5" />
 		</div>
-		<div class="art-work w-full cursor-pointer shadow-2xl shadow-black">
+		<div class="art-work opacity-0 scale-50 w-full cursor-pointer shadow-2xl shadow-black">
 			<img src="/images/painting-6.webp" alt="" title="painting6" />
 		</div>
 	</section>
